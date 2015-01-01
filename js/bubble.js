@@ -74,7 +74,7 @@ $(function () {
         },
 
         title: {
-            text: 'Verbrauch, Erzeugung und Energieabhängigkeit der EU-27 Länder'
+            text: ''
         },
 
         series: [
