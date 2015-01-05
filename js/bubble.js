@@ -6,6 +6,10 @@ $(function () {
             zoomType: 'xy'
         },
 		
+		legend: {
+			verticalAlign: 'top'
+		},
+		
 		xAxis: {
 			gridLineColor: '#C0C0C0',
 			gridLineWidth: 1,
