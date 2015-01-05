@@ -227,18 +227,18 @@
                     <p>= Der biologisch abbaubare Anteil von Industrie- und Haushaltsabfällen sowie von Erzeugnissen, Abfällen und Rückständen der Land- und Forstwirtschaft.</p>
                 </div>
                 <div class="col-md-offset-2 col-md-4">
-                    <h4 class="service-heading">Geothermie:</h4>
+                    <h4 class="service-heading">Geothermie</h4>
                     <p>= Die im zugänglichen Teil der Erdkruste gespeicherte Wärme. Sie umfasst die in der Erde gespeicherte geothermische Energie.</p>
                 </div>
             </div>
            	<br><br><br>
             <div class="row text-left">
                 <div class="col-md-offset-1 col-md-4">
-                    <h4 class="service-heading">Energieträger:</h4>
+                    <h4 class="service-heading">Energieträger</h4>
                     <p>= Alle Quellen oder Stoffe, in denen Energie mechanisch, thermisch, chemisch oder physikalisch gespeichert ist.</p>
                 </div>
                 <div class="col-md-offset-2 col-md-4">
-                    <h4 class="service-heading">Primärenergieträger:</h4>
+                    <h4 class="service-heading">Primärenergieträger</h4>
                     <p>= Energieträger, die in der Natur vorkommen und technisch noch nicht umgewandelt sind.</p>
                 </div>
             </div>
@@ -280,6 +280,25 @@
             </div>
         </div>
     </section>
+
+
+<?php 
+/** 
+* PHP_Text2Speech Class example 
+*/ 
+include 'audio/PHP_Text2Speech.class.php'; 
+$t2s = new PHP_Text2Speech;
+$text = '
+Eine stabile, verlässliche Energieversorgung trägt entscheidend zu Wohlstand und Erfolg eines Landes bei. Aktuelle Herausforderungen der Energiepolitik sind insbesondere die Versorgungssicherheit, Wirtschaftlichkeit und umweltfreundliche Energiegewinnung. Bislang basierte die Energieversorgung in Europa sehr stark auf den fossilen Brennstoffen Kohle, Erdöl und Erdgas.
+In den letzten 40 Jahren wurden sie von der Kernenergie als nicht-fossilem Brennstoff ergänzt. Angesichts des Klimawandels und knapper werdender Ressourcen gewinnen die erneuerbaren Energieträger wie Wasser, Wind und Biomasse zunehmend an Bedeutung. Die aus ihnen erzeugten Energie- mengen werden in den nächsten Jahren aller Voraussicht nach steigen.
+Die Europäische Union (EU) hat die Erhöhung des Anteils erneuerbarer Energien am Gesamtenergieverbrauch auf 20% bis 2020 zu einem ihrer klima- und energiepolitischen Ziele erklärt. Mit einer Vielzahl von Veranstaltungen informiert die EU-Kommission während der „Europäischen Woche der erneuerbaren Energien“ im April 2011 über Ver- fügbarkeit, Effizienz und den Umweltnutzen erneuerbarer Energien. Informationen hierzu finden Sie online unter: www.eusew.eu
+Dieses Faltblatt enthält Statistiken zur Energie- und Stromerzeugung sowie zum Energieverbrauch in Europa. Dabei wird der Fokus auf die erneuerbaren Energien gelegt. Sämtliche Daten stammen von Eurostat, dem Statistischen Amt der Europäischen Gemeinschaften.
+';
+?> 
+<audio controls="controls"> 
+    <source src="<?php echo $t2s->speak($text, 'de'); ?>" type="audio/mp3" />
+</audio>
+
 
     <footer>
         <div class="container">
