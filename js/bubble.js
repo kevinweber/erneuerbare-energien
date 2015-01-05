@@ -121,9 +121,9 @@ $(function () {
             },
             { 
                 name: 'Erzeugung',
-				color:'#90ed7d',
+				color:'#fff',
                 marker: { 
-					fillColor: '#90ed7d',
+					fillColor: '#a0c884',
 					fillOpacity: 1
 				},
                 data: [
