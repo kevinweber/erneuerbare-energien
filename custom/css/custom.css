@@ -17,6 +17,10 @@ body {
     color: #a0c884;
 }
 
+.white {
+    color: #fff;
+}
+
 p {
     font-size: 14px;
     line-height: 1.75;
@@ -657,13 +661,6 @@ section h3.section-subheading {
 
 aside.clients img {
     margin: 50px auto;
-}
-
-section#contact {
-    background-color: #222;
-    background-image: url(../img/map-image.png);
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 section#contact .section-heading {
