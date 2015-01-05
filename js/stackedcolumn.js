@@ -4,7 +4,9 @@ $(function () {
         chart: {
             type: 'column'
         },
-	
+	   credits: {
+            enabled: false
+        },
         xAxis: {
             categories: parse_xAxis
         },

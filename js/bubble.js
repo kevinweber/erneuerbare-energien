@@ -5,6 +5,9 @@ $(function () {
             type: 'bubble',
             zoomType: 'xy'
         },
+        credits: {
+      		enabled: false
+  		},
 		
 		legend: {
 			verticalAlign: 'top'
