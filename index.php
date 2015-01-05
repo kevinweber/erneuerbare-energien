@@ -131,7 +131,7 @@ Dieses Faltblatt enthält Statistiken zur Energie- und Stromerzeugung sowie zum 
                 <div class="col-md-offset-2 col-md-4">
                     <h4 class="service-heading">Aktuelle Herausforderungen:</h4>
                     <p class="text-muted">
-                        <ul>
+                        <ul class="text-muted">
                             <li>Versorgungssicherheit</li>
                             <li>Wirtschaftlichkeit</li>
                             <li>Umweltfreundliche Energiegewinnung</li>
