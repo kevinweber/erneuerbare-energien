@@ -213,15 +213,16 @@ Dieses Faltblatt enthält Statistiken zur Energie- und Stromerzeugung sowie zum 
     </section>
     
     
-    <br><br><br>
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Headline</h2>
-                    <h3 class="section-subheading text-muted">Sie können die Ansicht vergrößern, indem Sie mit gedrückter Maustaste eine Auswahl aufziehen. Per Klick auf Verbrauch bzw. Erzeugung in der Legende, können Sie diese ein- und ausblenden.</h3>
-                </div>
+    <section>
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Headline</h2>
+                <h3 class="section-subheading text-muted">Sie können die Ansicht vergrößern, indem Sie mit gedrückter Maustaste eine Auswahl aufziehen. Per Klick auf Verbrauch bzw. Erzeugung in der Legende, können Sie diese ein- und ausblenden.</h3>
             </div>
+        </div>
     
-    <div id="container_pf" style="height: 600px; min-width: 310px; max-width:100%; margin: 0 auto"></div>
+        <div id="container_pf" style="height: 600px; min-width: 310px; max-width:100%; margin: 0 auto"></div>
+    </section>
 
     <!-- About Section -->
     <section id="about">
