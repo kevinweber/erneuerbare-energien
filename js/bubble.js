@@ -84,9 +84,9 @@ $(function () {
         series: [
             { 
                 name: 'Verbrauch',
-				color:'#434348',
+				color:'#222',
                 marker: { 
-					fillColor: '#434348',
+					fillColor: '#222',
 					fillOpacity: 1
 				},
                 data: [
