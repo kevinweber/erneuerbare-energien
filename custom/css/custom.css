@@ -11,6 +11,13 @@
     Dark green:         #426e1f
  */
 
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+}
+
 body {
     overflow-x: hidden;
     font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -35,6 +42,29 @@ p {
 
 p.large {
     font-size: 16px;
+}
+
+
+.flexbox, .timeline-image, .timeline > li {
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    align-items: center;
+}
+
+.text-center-left {
+    text-align: left;
+}
+
+p.icon-text {
+    font-size: 56px;
+    font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin: 0;
+    width: 100%;
 }
 
 a,
@@ -292,6 +322,10 @@ header {
     -o-background-size: 50%;
 }
 
+header .container {
+    background-color: rgba( 255, 255, 255, 0.4 );
+}
+
 header .intro-text {
     padding-top: 100px;
     padding-bottom: 50px;
@@ -315,6 +349,12 @@ header .intro-text .intro-heading {
     line-height: 50px;
 }
 
+@media(min-width:690px) {
+    header .container {
+        background-color: initial;
+    }
+}
+
 @media(min-width:768px) {
     header .intro-text {
         padding-top: 190px;
@@ -333,9 +373,9 @@ header .intro-text .intro-heading {
         margin-bottom: 50px;
         text-transform: uppercase;
         font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-        font-size: 75px;
+        font-size: 60px;
         font-weight: 700;
-        line-height: 75px;
+        line-height: 65px;
     }
 }
 
@@ -448,7 +488,7 @@ section h3.section-subheading {
 
 .timeline {
     position: relative;
-    padding: 0;
+    padding: 20px 0 0;
     list-style: none;
 }
 
@@ -461,6 +501,7 @@ section h3.section-subheading {
     width: 2px;
     margin-left: -1.5px;
     background-color: #f1f1f1;
+    display: none;
 }
 
 .timeline>li {
@@ -561,29 +602,19 @@ section h3.section-subheading {
 
 @media(min-width:768px) {
     header {
-        background-position: right 310px;
-    }
-    .timeline:before {
-        left: 50%;
+        background-position: right 260px;
     }
 
     .timeline>li {
-        margin-bottom: 100px;
+        margin-bottom: 35px;
         min-height: 100px;
     }
 
-    .timeline>li .timeline-panel {
-        float: left;
-        width: 41%;
-        padding: 0 20px 20px 30px;
-        text-align: right;
-    }
-
     .timeline>li .timeline-image {
-        left: 50%;
+        left: 0;
         width: 100px;
         height: 100px;
-        margin-left: -50px;
+        margin-left: 0;
     }
 
     .timeline>li .timeline-image h4 {
@@ -608,6 +639,17 @@ section h3.section-subheading {
         -moz-background-size: 50%;
         background-size: 50%;
         -o-background-size: 50%;
+    }
+    header .intro-text .intro-heading {
+        margin-bottom: 50px;
+        text-transform: uppercase;
+        font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-size: 75px;
+        font-weight: 700;
+        line-height: 75px;
+    }
+    .text-center-left {
+        text-align: center;
     }
     .timeline>li {
         min-height: 150px;
@@ -650,13 +692,13 @@ section h3.section-subheading {
     }
 
     .timeline>li .timeline-panel {
-        padding: 0 20px 20px 100px;
+        padding: 0 20px 20px 60px;
     }
 
     .timeline>li .timeline-image {
         width: 170px;
         height: 170px;
-        margin-left: -85px;
+        margin-left: 0;
     }
 
     .timeline>li .timeline-image h4 {
