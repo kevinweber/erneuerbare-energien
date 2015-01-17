@@ -563,11 +563,17 @@ section h3.section-subheading {
     text-shadow: 0px 0px 30px rgba(119, 119, 119, 0.7);
 }
 
-.fill-8-8 {
-    background: -webkit-linear-gradient(#a0c884 91.6%, #426e1f 91.6%); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#a0c884 91.6%, #426e1f 91.6%); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#a0c884 91.6%, #426e1f 91.6%); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#a0c884 91.6%, #426e1f 91.6%); /* Standard syntax (must be last) */
+.fill-30 {
+    background: -webkit-linear-gradient(#a0c884 30%, #426e1f 30%); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#a0c884 30%, #426e1f 30%); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#a0c884 30%, #426e1f 30%); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#a0c884 30%, #426e1f 30%); /* Standard syntax (must be last) */
+}
+.fill-38 {
+    background: -webkit-linear-gradient(#a0c884 38%, #426e1f 38%); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#a0c884 38%, #426e1f 38%); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#a0c884 38%, #426e1f 38%); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#a0c884 38%, #426e1f 38%); /* Standard syntax (must be last) */
 }
 .fill-41 {
     background: -webkit-linear-gradient(#a0c884 59%, #426e1f 59%); /* For Safari 5.1 to 6.0 */
@@ -580,6 +586,36 @@ section h3.section-subheading {
     background: -o-linear-gradient(#a0c884 66.6%, #426e1f 66.6%); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(#a0c884 66.6%, #426e1f 66.6%); /* For Firefox 3.6 to 15 */
     background: linear-gradient(#a0c884 66.6%, #426e1f 66.6%); /* Standard syntax (must be last) */
+}
+.fill-82-4 {
+    background: -webkit-linear-gradient(#a0c884 82.4%, #426e1f 82.4%); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#a0c884 82.4%, #426e1f 82.4%); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#a0c884 82.4%, #426e1f 82.4%); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#a0c884 82.4%, #426e1f 82.4%); /* Standard syntax (must be last) */
+}
+.fill-83-3 {
+    background: -webkit-linear-gradient(#a0c884 83.3%, #426e1f 83.3%); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#a0c884 83.3%, #426e1f 83.3%); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#a0c884 83.3%, #426e1f 83.3%); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#a0c884 83.3%, #426e1f 83.3%); /* Standard syntax (must be last) */
+}
+.fill-84-6 {
+    background: -webkit-linear-gradient(#a0c884 84.6%, #426e1f 84.6%); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#a0c884 84.6%, #426e1f 84.6%); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#a0c884 84.6%, #426e1f 84.6%); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#a0c884 84.6%, #426e1f 84.6%); /* Standard syntax (must be last) */
+}
+.fill-91-6 {
+    background: -webkit-linear-gradient(#a0c884 91.6%, #426e1f 91.6%); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#a0c884 91.6%, #426e1f 91.6%); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#a0c884 91.6%, #426e1f 91.6%); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#a0c884 91.6%, #426e1f 91.6%); /* Standard syntax (must be last) */
+}
+.fill-93-1 {
+    background: -webkit-linear-gradient(#a0c884 93.1%, #426e1f 93.1%); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#a0c884 93.1%, #426e1f 93.1%); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#a0c884 93.1%, #426e1f 93.1%); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#a0c884 93.1%, #426e1f 93.1%); /* Standard syntax (must be last) */
 }
 
 .timeline>li .timeline-image h4 {
