@@ -7,7 +7,7 @@
     Dark grey/black:    #222
     Grey:               #777
     Light grey:         #f7f7f7
-    Green:              #d0c884
+    Green:              #a0c884
     Dark green:         #426e1f
  */
 
@@ -44,6 +44,14 @@ p.large {
     font-size: 16px;
 }
 
+p.icon-text {
+    font-size: 26px;
+    font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    margin: 0;
+    width: 100%;
+    padding-left: 2px;
+}
 
 .flexbox, .timeline-image, .timeline > li {
     display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
@@ -51,20 +59,14 @@ p.large {
     display: -ms-flexbox;      /* TWEENER - IE 10 */
     display: -webkit-flex;     /* NEW - Chrome */
     display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
     align-items: center;
 }
 
 .text-center-left {
     text-align: left;
-}
-
-p.icon-text {
-    font-size: 56px;
-    font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
-    letter-spacing: 4px;
-    margin: 0;
-    width: 100%;
 }
 
 a,
@@ -275,6 +277,10 @@ fieldset[disabled] .btn-xl.active {
 }
 
 @media(min-width:768px) {
+    p.icon-text {
+        padding-left: 5px;
+    }
+
     .navbar-default {
         padding: 25px 0;
         border: 0;
@@ -506,8 +512,8 @@ section h3.section-subheading {
 
 .timeline>li {
     position: relative;
-    margin-bottom: 50px;
-    min-height: 50px;
+    margin-bottom: 38px;
+    min-height: 80px;
 }
 
 .timeline>li:before,
@@ -554,6 +560,26 @@ section h3.section-subheading {
     text-align: center;
     color: #fff;
     background-color: #a0c884;
+    text-shadow: 0px 0px 30px rgba(119, 119, 119, 0.7);
+}
+
+.fill-8-8 {
+    background: -webkit-linear-gradient(#a0c884 91.6%, #426e1f 91.6%); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#a0c884 91.6%, #426e1f 91.6%); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#a0c884 91.6%, #426e1f 91.6%); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#a0c884 91.6%, #426e1f 91.6%); /* Standard syntax (must be last) */
+}
+.fill-41 {
+    background: -webkit-linear-gradient(#a0c884 59%, #426e1f 59%); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#a0c884 59%, #426e1f 59%); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#a0c884 59%, #426e1f 59%); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#a0c884 59%, #426e1f 59%); /* Standard syntax (must be last) */
+}
+.fill-66-6 {
+    background: -webkit-linear-gradient(#a0c884 66.6%, #426e1f 66.6%); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#a0c884 66.6%, #426e1f 66.6%); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#a0c884 66.6%, #426e1f 66.6%); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#a0c884 66.6%, #426e1f 66.6%); /* Standard syntax (must be last) */
 }
 
 .timeline>li .timeline-image h4 {
@@ -605,6 +631,10 @@ section h3.section-subheading {
         background-position: right 260px;
     }
 
+    p.icon-text {
+        font-size: 35px;
+    }
+
     .timeline>li {
         margin-bottom: 35px;
         min-height: 100px;
@@ -651,18 +681,22 @@ section h3.section-subheading {
     .text-center-left {
         text-align: center;
     }
+    p.icon-text {
+        font-size: 56px;
+        letter-spacing: 4px;
+    }
     .timeline>li {
-        min-height: 150px;
+        margin-bottom: 65px;
+        min-height: 120px;
     }
 
     .timeline>li .timeline-panel {
-        padding: 0 20px 20px;
+        padding: 20px 20px 0;
     }
 
     .timeline>li .timeline-image {
         width: 150px;
         height: 150px;
-        margin-left: -75px;
     }
 
     .timeline>li .timeline-image h4 {
@@ -692,7 +726,7 @@ section h3.section-subheading {
     }
 
     .timeline>li .timeline-panel {
-        padding: 0 20px 20px 60px;
+        padding: 0 20px 0 60px;
     }
 
     .timeline>li .timeline-image {
