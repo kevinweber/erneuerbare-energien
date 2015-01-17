@@ -276,13 +276,13 @@ header {
     text-align: left;
     color: #000;
     background-attachment: scroll;
-    background-image: url(../img/header-bg.jpg);
-    background-position: right top;
+    background-image: url(../img/header-bg-small.jpg);
+    background-position: right 110px;
     background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+    -webkit-background-size: 50%;
+    -moz-background-size: 50%;
+    background-size: 50%;
+    -o-background-size: 50%;
 }
 
 header .intro-text {
@@ -553,6 +553,9 @@ section h3.section-subheading {
 }
 
 @media(min-width:768px) {
+    header {
+        background-position: right 310px;
+    }
     .timeline:before {
         left: 50%;
     }
@@ -590,6 +593,15 @@ section h3.section-subheading {
 }
 
 @media(min-width:992px) {
+    header {
+        background-image: url(../img/header-bg-small.jpg);
+        background-position: right 260px;
+        background-repeat: no-repeat;
+        -webkit-background-size: 50%;
+        -moz-background-size: 50%;
+        background-size: 50%;
+        -o-background-size: 50%;
+    }
     .timeline>li {
         min-height: 150px;
     }
@@ -616,6 +628,16 @@ section h3.section-subheading {
 }
 
 @media(min-width:1200px) {
+    header {
+        background-image: url(../img/header-bg.jpg);
+        background-position: right top;
+        background-repeat: no-repeat;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
+    }
+
     .timeline>li {
         min-height: 170px;
     }
