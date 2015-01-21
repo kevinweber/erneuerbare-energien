@@ -33,7 +33,6 @@
 
     // function selectExample
     function selectExample(item) {
-		console.log(item);
       var file = 'csv/'+ item + ".csv";
       $http.get(file).success(function(data) {
         ctrl.data = data;

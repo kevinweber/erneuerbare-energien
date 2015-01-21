@@ -13,6 +13,8 @@ $(function() {
         }, 1500, 'easeInOutExpo');
         event.preventDefault();
     });
+	
+
 });
 
 // Highlight the top nav as scrolling occurs
@@ -24,3 +26,12 @@ $('body').scrollspy({
 $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
+
+	$('body').on('click', '#s11', function() {
+		
+		$(this).addClass('active-land');
+	});
+
+function setActive(elem) {
+	$(elem).addClass('active-land');
+}

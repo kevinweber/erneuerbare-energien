@@ -60,6 +60,7 @@ function sunburstDraw(scope, element) {
    */
   // Mapping of nodes to colorscale.
   var colors = d3.scale.category10();
+	
 
   // Total size of all nodes, to be used later when data is loaded
   var totalSize = 0;
@@ -304,9 +305,9 @@ function sunburstDraw(scope, element) {
 
     // update summary
     summary.html(
-      "Stage: " + d.depth + "<br />" +
+      "<b>" + d.name + "</b><br />" +
       "<span class='percentage'>" + percentageString + "</span><br />" +
-      d.value + " of " + totalSize + "<br />"
+      d.value + " RÖE von " + totalSize + " RÖE <br>(in 1000t RÖE)<br />"
     );
 
     // display summary and breadcrumbs if hidden

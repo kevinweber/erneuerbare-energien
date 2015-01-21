@@ -9,6 +9,11 @@ body {
     font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
+.alles-wrapper {
+    overflow-x: hidden;
+    width: 100%;
+}
+
 .text-muted {
     color: #777;
 }
@@ -869,7 +874,12 @@ body {
 .europe-map {
 	float: right;
 	position: absolute;
-	right: -200px;
+	right: 0px;
+}
+
+.europe-wrap {
+	width: 750px;
+	overflow: hidden;
 }
 
 .sunburst-wrapper {
@@ -878,4 +888,16 @@ body {
 	width: 550px;
 	left: 0;
 	padding: 45px 0 0 0;
+}
+
+.active-land path {
+	fill: #222;
+}
+
+.percentage {
+	font-size: 24px;
+}
+
+.summary-container {
+	z-index: 1 !important;
 }
