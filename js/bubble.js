@@ -22,7 +22,7 @@ $(function () {
                 value: 0
             }],
 //			title: {
-//				text: '<b>Energieabhängigkeit in Prozent</b>'
+//				text: 'Energieabhängigkeit in Prozent'
 //			}
 			
 		},
@@ -45,6 +45,7 @@ $(function () {
 		tooltip: {
 			useHTML: true,
 			backgroundColor: '#e5e5e5',
+			borderColor: '#222',
 			formatter: function () {
 				var s = '<b>' + this.key + '</b><table>',
 					name = this.point.name;
@@ -70,7 +71,8 @@ $(function () {
                 dataLabels: {
                     enabled: true,
                     style: { 
-							textShadow: '0px 0px 2px black',
+						    color: "#222",
+							textShadow: '0px 0px 2px #fff',
 						   },
                     formatter: function() {
                         return this.point.name;
@@ -90,10 +92,10 @@ $(function () {
         series: [
             { 
                 name: 'Verbrauch',
-				color:'#222',
+				color:'rgba(34, 34, 34, 0.9)',
                 marker: { 
-					fillColor: '#222',
-					fillOpacity: 1
+					fillColor: 'rgba(34, 34, 34, 0.9)', // B25553
+					fillOpacity: 0.8
 				},
                 data: [
 {name: 'Deutschland ', x: 60.9, y: 10.4, z: 343675},
