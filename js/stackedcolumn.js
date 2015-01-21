@@ -92,6 +92,8 @@ $(function () {
 });
 
 Highcharts.theme = {
-    colors: ['#aace92','#a0c884','#96c276','#8bbc69','#81b65b','#000000','#000000','#000000','#000000']};
+    colors: ['#146196','#5195c4','#629fc9','#73a9cf','#84b3d4','#b4481f','#b9562f','#be6440','#c47251']};
+	
+	//Grün #a0c884
 			 
 Highcharts.setOptions(Highcharts.theme);
