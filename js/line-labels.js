@@ -2,7 +2,8 @@
 $(function () {
     $('#container-line-labels').highcharts({
         chart: {
-            type: 'line'
+            type: 'line',
+            backgroundColor: '#f7f7f7'
         },
         title: {
             text: ''
@@ -14,8 +15,11 @@ $(function () {
             categories: ['1998', '2008', '2020']
         },
         yAxis: {
+            labels: {
+                enabled: false
+            },
             title: {
-                text: 'Anteil am Energieverbrauch'
+                text: ''
             }
         },
         plotOptions: {
