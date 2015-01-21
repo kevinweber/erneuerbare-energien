@@ -59,8 +59,10 @@ function sunburstDraw(scope, element) {
    * e.g. colors, totalSize, partitions, arcs
    */
   // Mapping of nodes to colorscale.
-  var colors = d3.scale.category10();
-	
+//  var colors = d3.scale.category10();
+  var colors = d3.scale.ordinal()
+  .domain(["Erzeugung", "Stein und Braunkohle", "Rohoel", "Naturgas", "Kernenergie", "erneuerbare Energien", "Sonnenenergie", "Biomasse und Abfaelle", "geothermische Energie", "Wasserkraft", "Windkraft"])
+  .range(["#fff", "#A0C884", "#B4481F", "#B9562F", "#BE6440", "#C47251", "#146196", "#5195C4", "#629FC9", "#73A9CF", "#84B3D4", "#95BEDA"]);
 
   // Total size of all nodes, to be used later when data is loaded
   var totalSize = 0;
