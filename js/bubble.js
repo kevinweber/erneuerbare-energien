@@ -21,6 +21,9 @@ $(function () {
                 width: 2,
                 value: 0
             }],
+//			title: {
+//				text: '<b>Energieabhängigkeit in Prozent</b>'
+//			}
 			
 		},
 		
