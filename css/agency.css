@@ -891,7 +891,7 @@ body {
 }
 
 .active-land path {
-	fill: #222;
+	fill: #222 !important;
 }
 
 .percentage {
