@@ -1065,3 +1065,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a0c884', end
 	float:left;
 	margin-right:16px
 }
+
+.legend_multiple_select.inactive > span{
+	color:#CCC !important;
+}
+
+.legend_multiple_select.inactive > div{
+	background-color:#CCC !important;
+}

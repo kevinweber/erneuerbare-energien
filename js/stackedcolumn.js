@@ -128,6 +128,24 @@ $('#container_pf').highcharts({
     });
 };
 
+$( "#toggle_renew" ).click(function() {
+  if($(this).hasClass('inactive')){
+	$(this).removeClass('inactive');	
+  }
+  else{
+	$(this).addClass('inactive');
+  }
+});
+
+$( "#toggle_burn" ).click(function() {
+  if($(this).hasClass('inactive')){
+	$(this).removeClass('inactive');	
+  }
+  else{
+	$(this).addClass('inactive');
+  }
+});
+
 
 Highcharts.theme = {
     colors: ['#146196','#5195c4','#629fc9','#73a9cf','#84b3d4','#b4481f','#b9562f','#be6440','#c47251']};
