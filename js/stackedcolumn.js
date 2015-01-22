@@ -9,14 +9,18 @@ for (x in energy){
 }
 
 var energy_axis_text = "";
-
+var last_chart_type;
 
 function reloadHS(chart_type) {
 	var series = [];
 	var ceiling_buffer = null;
 	var ceiling_reset = null;
 	
+	updateTheme(chart_type);
+	last_chart_type = chart_type;
 	if(chart_type == 'produce'){
+		$('#toggle_renew').show();
+		$('#legend-multiple_select').width(450);
 		for (x in energy_production_types){
 			series.push({name:energy_production_types[x],data:[],stack:"production"});
 		}
@@ -35,6 +39,9 @@ function reloadHS(chart_type) {
 		energy_axis_text = "Primärerzeugnis in Tonnen Rohöleinheit";
 	}
 	else if(chart_type == 'consume'){
+		$('#toggle_renew').hide();
+		$('#legend-multiple_select').width(300);
+		
 		for (x in energy_consume_types){
 			series.push({name:energy_consume_types[x],data:[],stack:"consume"});
 		}
@@ -126,24 +133,77 @@ $('#container_pf').highcharts({
 
         series: series
     });
+	
+	
 };
 
 $( "#toggle_renew" ).click(function() {
   if($(this).hasClass('inactive')){
-	$(this).removeClass('inactive');	
+	$(this).removeClass('inactive');
+	chart_pf.series[0].show(); 	
+	chart_pf.series[1].show(); 	
+	chart_pf.series[2].show(); 	
+	chart_pf.series[3].show(); 	
+	chart_pf.series[4].show(); 	
   }
   else{
 	$(this).addClass('inactive');
+	chart_pf.series[0].hide(); 
+	chart_pf.series[1].hide(); 
+	chart_pf.series[2].hide(); 
+	chart_pf.series[3].hide(); 
+	chart_pf.series[4].hide(); 
   }
 });
 
 $( "#toggle_burn" ).click(function() {
-  if($(this).hasClass('inactive')){
-	$(this).removeClass('inactive');	
+  if (last_chart_type == 'produce'){
+	  if($(this).hasClass('inactive')){
+		$(this).removeClass('inactive');
+		chart_pf.series[5].show();	
+		chart_pf.series[6].show();	
+		chart_pf.series[7].show();	
+		chart_pf.series[8].show();	
+	  }
+	  else{
+		$(this).addClass('inactive');
+		chart_pf.series[5].hide();
+		chart_pf.series[6].hide();
+		chart_pf.series[7].hide();
+		chart_pf.series[8].hide();
+	  }
   }
   else{
-	$(this).addClass('inactive');
+		if($(this).hasClass('inactive')){
+		$(this).removeClass('inactive');
+		chart_pf.series[0].show();	
+		chart_pf.series[1].show();	
+		chart_pf.series[2].show();	
+		chart_pf.series[3].show();	
+	  }
+	  else{
+		$(this).addClass('inactive');
+		chart_pf.series[0].hide();
+		chart_pf.series[1].hide();
+		chart_pf.series[2].hide();
+		chart_pf.series[3].hide();
+	  }
   }
+});
+
+$( "#select_all" ).click(function() {
+	$("#toggle_renew").removeClass('inactive');
+	$("#toggle_burn").removeClass('inactive');
+	chart_pf.series[0].show(); 	
+	chart_pf.series[1].show(); 	
+	chart_pf.series[2].show(); 	
+	chart_pf.series[3].show(); 	
+	chart_pf.series[4].show(); 	
+	chart_pf.series[5].show();	
+	chart_pf.series[6].show();	
+	chart_pf.series[7].show();	
+	chart_pf.series[8].show();	
+
 });
 
 
@@ -153,5 +213,15 @@ Highcharts.theme = {
 	//sunburst ['#146196','#5195c4','#629fc9','#73a9cf','#84b3d4','#b4481f','#b9562f','#be6440','#c47251']
 			 
 Highcharts.setOptions(Highcharts.theme);
+
+function updateTheme(type){
+	 if(type == 'consume'){
+		Highcharts.theme = {colors: ['#b4481f','#b9562f','#be6440','#c47251','#146196']};
+	 }
+	 else {
+		Highcharts.theme = {colors: ['#146196','#5195c4','#629fc9','#73a9cf','#84b3d4','#b4481f','#b9562f','#be6440','#c47251']};
+	}
+	Highcharts.setOptions(Highcharts.theme);
+}
 
 $(reloadHS('produce'));
