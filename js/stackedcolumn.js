@@ -15,6 +15,8 @@ function reloadHS(chart_type) {
 	var series = [];
 	var ceiling_buffer = null;
 	var ceiling_reset = null;
+	$("#toggle_renew").removeClass('inactive');
+	$("#toggle_burn").removeClass('inactive');
 	
 	updateTheme(chart_type);
 	last_chart_type = chart_type;
