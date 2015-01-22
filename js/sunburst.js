@@ -122,7 +122,7 @@ function sunburstDraw(scope, element) {
     .append("div").classed("legend-container", true)
     .style("position", "absolute")
     .style("top", '0' + "px")
-    .style("left", 2 * radius + sunburstMargin.right + "px")
+    .style("left", 2 * radius + sunburstMargin.right - 65 + "px")
     .style("width", 50 + "px")
     .style("height", 50 + "px")
     .append("svg")
