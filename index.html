@@ -170,9 +170,13 @@
                 </div>
             </div>
         
-			<div class="btn-group" role="group">
-			  <button type="button" class="btn btn-default">Produktion</button>
-			  <button type="button" class="btn btn-default">Verbrauch</button>
+			<div class="btn-group" data-toggle="buttons" id="button-chart-type">
+			  <label class="btn btn-primary active" onclick="reloadHS('produce')" id="button-chart-type-produce">
+				<input type="radio" autocomplete="off">Produktion
+			  </label>
+			  <label class="btn btn-primary" onclick="reloadHS('consume')" id="button-chart-type-consume">
+				<input type="radio" autocomplete="off">Verbrauch
+			  </label>
 			</div>
 			
             <div id="container_pf" style="height: 600px; min-width: 310px; max-width:100%; margin: 0 auto"></div>
