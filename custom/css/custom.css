@@ -1023,3 +1023,8 @@ margin: 27px auto 0 auto;
 .legend_multiple_select.inactive > div{
 	background-color:#CCC !important;
 }
+
+#button-chart-type {
+	left: 50%;
+	margin-left: -117px;
+}
