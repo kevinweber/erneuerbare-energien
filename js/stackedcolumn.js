@@ -113,9 +113,9 @@ $('#container_pf').highcharts({
 							dyn_tooltip = '<b>' + bufferObject[0].name_de + '</b><br/>' +
 							energy_type + ':<span style="float:right">' + bufferObject[0].production_renewable_solar_absolute + ' k</span><br/>' +
 							'Anteil an erneuerbaren Energien:<span style="float:right">' + bufferObject[0].production_renewable_solar_percentage_fraction + '%</span><br/><br/>' +
-							'Gesamtproduktion:<span style="float:right">' + bufferObject[0].production_total_absolute + ' k</span><br/>' +
-							'Anteil an Gesamtproduktion:<span style="float:right">' + bufferObject[0].production_renewable_solar_percentage_total + '%</span><br/><br/>' +
-							'Gesamtproduktion aktuelle Auswahl:&nbsp;&nbsp;&nbsp;&nbsp;' + total_production_selection + ' k<br/>' +
+							'Gesamterzeugung:<span style="float:right">' + bufferObject[0].production_total_absolute + ' k</span><br/>' +
+							'Anteil an Gesamterzeugung:<span style="float:right">' + bufferObject[0].production_renewable_solar_percentage_total + '%</span><br/><br/>' +
+							'Gesamterzeugung aktuelle Auswahl:&nbsp;&nbsp;&nbsp;&nbsp;' + total_production_selection + ' k<br/>' +
 							'Anteil an aktueller Auswahl:<span style="float:right">' + roundToTwo(bufferObject[0].production_renewable_solar_absolute/total_production_selection*100) +'%</span>';						
 						break;
 						
@@ -123,9 +123,9 @@ $('#container_pf').highcharts({
 							dyn_tooltip = '<b>' + bufferObject[0].name_de + '</b><br/>' +
 							energy_type + ':<span style="float:right">' + bufferObject[0].production_renewable_waste_absolute + ' k</span><br/>' +
 							'Anteil an erneuerbaren Energien:<span style="float:right">' + bufferObject[0].production_renewable_waste_percentage_fraction + '%</span><br/><br/>' +
-							'Gesamtproduktion:<span style="float:right">' + bufferObject[0].production_total_absolute + ' k</span><br/>' +
-							'Anteil an Gesamtproduktion:<span style="float:right">' + bufferObject[0].production_renewable_waste_percentage_total + '%</span><br/><br/>' +
-							'Gesamtproduktion aktuelle Auswahl:&nbsp;&nbsp;&nbsp;&nbsp;' + total_production_selection + ' k<br/>' +
+							'Gesamterzeugung:<span style="float:right">' + bufferObject[0].production_total_absolute + ' k</span><br/>' +
+							'Anteil an Gesamterzeugung:<span style="float:right">' + bufferObject[0].production_renewable_waste_percentage_total + '%</span><br/><br/>' +
+							'Gesamterzeugung aktuelle Auswahl:&nbsp;&nbsp;&nbsp;&nbsp;' + total_production_selection + ' k<br/>' +
 							'Anteil an aktueller Auswahl:<span style="float:right">' + roundToTwo(bufferObject[0].production_renewable_waste_absolute/total_production_selection*100) +'%</span>';
 						break;
 						
@@ -133,9 +133,9 @@ $('#container_pf').highcharts({
 							dyn_tooltip = '<b>' + bufferObject[0].name_de + '</b><br/>' +
 							energy_type + ':<span style="float:right">' + bufferObject[0].production_renewable_geothermic_absolute + ' k</span><br/>' +
 							'Anteil an erneuerbaren Energien:<span style="float:right">' + bufferObject[0].production_renewable_geothermic_percentage_fraction + '%</span><br/><br/>' +
-							'Gesamtproduktion:<span style="float:right">' + bufferObject[0].production_total_absolute + ' k</span><br/>' +
-							'Anteil an Gesamtproduktion:<span style="float:right">' + bufferObject[0].production_renewable_geothermic_percentage_total + '%</span><br/><br/>' +
-							'Gesamtproduktion aktuelle Auswahl:&nbsp;&nbsp;&nbsp;&nbsp;' + total_production_selection + ' k<br/>' +
+							'Gesamterzeugung:<span style="float:right">' + bufferObject[0].production_total_absolute + ' k</span><br/>' +
+							'Anteil an Gesamterzeugung:<span style="float:right">' + bufferObject[0].production_renewable_geothermic_percentage_total + '%</span><br/><br/>' +
+							'Gesamterzeugung aktuelle Auswahl:&nbsp;&nbsp;&nbsp;&nbsp;' + total_production_selection + ' k<br/>' +
 							'Anteil an aktueller Auswahl:<span style="float:right">' + roundToTwo(bufferObject[0].production_renewable_geothermic_absolute/total_production_selection*100) +'%</span>';
 						break;
 						
@@ -143,9 +143,9 @@ $('#container_pf').highcharts({
 							dyn_tooltip = '<b>' + bufferObject[0].name_de + '</b><br/>' +
 							energy_type + ':<span style="float:right">' + bufferObject[0].production_renewable_water_absolute + ' k</span><br/>' +
 							'Anteil an erneuerbaren Energien:<span style="float:right">' + bufferObject[0].production_renewable_water_percentage_fraction + '%</span><br/><br/>' +
-							'Gesamtproduktion:<span style="float:right">' + bufferObject[0].production_total_absolute + ' k</span><br/>' +
-							'Anteil an Gesamtproduktion:<span style="float:right">' + bufferObject[0].production_renewable_water_percentage_total + '%</span><br/><br/>' +
-							'Gesamtproduktion aktuelle Auswahl:&nbsp;&nbsp;&nbsp;&nbsp;' + total_production_selection + ' k<br/>' +
+							'Gesamterzeugung:<span style="float:right">' + bufferObject[0].production_total_absolute + ' k</span><br/>' +
+							'Anteil an Gesamterzeugung:<span style="float:right">' + bufferObject[0].production_renewable_water_percentage_total + '%</span><br/><br/>' +
+							'Gesamterzeugung aktuelle Auswahl:&nbsp;&nbsp;&nbsp;&nbsp;' + total_production_selection + ' k<br/>' +
 							'Anteil an aktueller Auswahl:<span style="float:right">' + roundToTwo(bufferObject[0].production_renewable_water_absolute/total_production_selection*100) +'%</span>';
 						break;
 						
@@ -153,45 +153,45 @@ $('#container_pf').highcharts({
 							dyn_tooltip = '<b>' + bufferObject[0].name_de + '</b><br/>' +
 							energy_type + ':<span style="float:right">' + bufferObject[0].production_renewable_wind_absolute + ' k</span><br/>' +
 							'Anteil an erneuerbaren Energien:<span style="float:right">' + bufferObject[0].production_renewable_wind_percentage_fraction + '%</span><br/><br/>' +
-							'Gesamtproduktion:<span style="float:right">' + bufferObject[0].production_total_absolute + ' k</span><br/>' +
-							'Anteil an Gesamtproduktion:<span style="float:right">' + bufferObject[0].production_renewable_wind_percentage_total + '%</span><br/><br/>' +
-							'Gesamtproduktion aktuelle Auswahl:&nbsp;&nbsp;&nbsp;&nbsp;' + total_production_selection + ' k<br/>' +
+							'Gesamterzeugung:<span style="float:right">' + bufferObject[0].production_total_absolute + ' k</span><br/>' +
+							'Anteil an Gesamterzeugung:<span style="float:right">' + bufferObject[0].production_renewable_wind_percentage_total + '%</span><br/><br/>' +
+							'Gesamterzeugung aktuelle Auswahl:&nbsp;&nbsp;&nbsp;&nbsp;' + total_production_selection + ' k<br/>' +
 							'Anteil an aktueller Auswahl:<span style="float:right">' + roundToTwo(bufferObject[0].production_renewable_wind_absolute/total_production_selection*100) +'%</span>';
 						break;
 						
 						case "Stein- und Braunkohle":		
 							dyn_tooltip = '<b>' + bufferObject[0].name_de + '</b><br/>' +
 							energy_type + ':<span style="float:right">' + bufferObject[0].production_coal_absolute + ' k</span><br/><br/>' +
-							'Gesamtproduktion:<span style="float:right">' + bufferObject[0].production_total_absolute + ' k</span><br/>' +
-							'Anteil an Gesamtproduktion:<span style="float:right">' + bufferObject[0].production_coal_percentage_total + '%</span><br/><br/>' +
-							'Gesamtproduktion aktuelle Auswahl:&nbsp;&nbsp;&nbsp;&nbsp;' + total_production_selection + ' k<br/>' +
+							'Gesamterzeugung:<span style="float:right">' + bufferObject[0].production_total_absolute + ' k</span><br/>' +
+							'Anteil an Gesamterzeugung:<span style="float:right">' + bufferObject[0].production_coal_percentage_total + '%</span><br/><br/>' +
+							'Gesamterzeugung aktuelle Auswahl:&nbsp;&nbsp;&nbsp;&nbsp;' + total_production_selection + ' k<br/>' +
 							'Anteil an aktueller Auswahl:<span style="float:right">' + roundToTwo(bufferObject[0].production_coal_absolute/total_production_selection*100) +'%</span>';
 						break;
 						
 						case "Rohöl":
 							dyn_tooltip = '<b>' + bufferObject[0].name_de + '</b><br/>' +
 							energy_type + ':<span style="float:right">' + bufferObject[0].production_oil_absolute + ' k</span><br/><br/>' +
-							'Gesamtproduktion:<span style="float:right">' + bufferObject[0].production_total_absolute + ' k</span><br/>' +
-							'Anteil an Gesamtproduktion:<span style="float:right">' + bufferObject[0].production_oil_percentage_total + '%</span><br/><br/>' +
-							'Gesamtproduktion aktuelle Auswahl:&nbsp;&nbsp;&nbsp;&nbsp;' + total_production_selection + ' k<br/>' +
+							'Gesamterzeugung:<span style="float:right">' + bufferObject[0].production_total_absolute + ' k</span><br/>' +
+							'Anteil an Gesamterzeugung:<span style="float:right">' + bufferObject[0].production_oil_percentage_total + '%</span><br/><br/>' +
+							'Gesamterzeugung aktuelle Auswahl:&nbsp;&nbsp;&nbsp;&nbsp;' + total_production_selection + ' k<br/>' +
 							'Anteil an aktueller Auswahl:<span style="float:right">' + roundToTwo(bufferObject[0].production_oil_absolute/total_production_selection*100) +'%</span>';
 						break;
 						
 						case "Naturgas":
 							dyn_tooltip = '<b>' + bufferObject[0].name_de + '</b><br/>' +
 							energy_type + ':<span style="float:right">' + bufferObject[0].production_gas_absolute + ' k</span><br/><br/>' +
-							'Gesamtproduktion:<span style="float:right">' + bufferObject[0].production_total_absolute + ' k</span><br/>' +
-							'Anteil an Gesamtproduktion:<span style="float:right">' + bufferObject[0].production_gas_percentage_total + '%</span><br/><br/>' +
-							'Gesamtproduktion aktuelle Auswahl:&nbsp;&nbsp;&nbsp;&nbsp;' + total_production_selection + ' k<br/>' +
+							'Gesamterzeugung:<span style="float:right">' + bufferObject[0].production_total_absolute + ' k</span><br/>' +
+							'Anteil an Gesamterzeugung:<span style="float:right">' + bufferObject[0].production_gas_percentage_total + '%</span><br/><br/>' +
+							'Gesamterzeugung aktuelle Auswahl:&nbsp;&nbsp;&nbsp;&nbsp;' + total_production_selection + ' k<br/>' +
 							'Anteil an aktueller Auswahl:<span style="float:right">' + roundToTwo(bufferObject[0].production_gas_absolute/total_production_selection*100) +'%</span>';
 						break;
 						
 						case "Kernenergie":
 							dyn_tooltip = '<b>' + bufferObject[0].name_de + '</b><br/>' +
 							energy_type + ':<span style="float:right">' + bufferObject[0].production_core_absolute + ' k</span><br/><br/>' +
-							'Gesamtproduktion:<span style="float:right">' + bufferObject[0].production_total_absolute + ' k</span><br/>' +
-							'Anteil an Gesamtproduktion:<span style="float:right">' + bufferObject[0].production_core_percentage_total + '%</span><br/><br/>' +
-							'Gesamtproduktion aktuelle Auswahl:&nbsp;&nbsp;&nbsp;&nbsp;' + total_production_selection + ' k<br/>' +
+							'Gesamterzeugung:<span style="float:right">' + bufferObject[0].production_total_absolute + ' k</span><br/>' +
+							'Anteil an Gesamterzeugung:<span style="float:right">' + bufferObject[0].production_core_percentage_total + '%</span><br/><br/>' +
+							'Gesamterzeugung aktuelle Auswahl:&nbsp;&nbsp;&nbsp;&nbsp;' + total_production_selection + ' k<br/>' +
 							'Anteil an aktueller Auswahl:<span style="float:right">' + roundToTwo(bufferObject[0].production_core_absolute/total_production_selection*100) +'%</span>';
 						break;
 					
