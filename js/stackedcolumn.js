@@ -9,11 +9,12 @@ for (x in energy){
 }
 
 var energy_axis_text = "";
-var ceiling_buffer = null;
-var ceiling_reset = null;
+
 
 function reloadHS(chart_type) {
 	var series = [];
+	var ceiling_buffer = null;
+	var ceiling_reset = null;
 	
 	if(chart_type == 'produce'){
 		for (x in energy_production_types){
