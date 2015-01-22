@@ -46,7 +46,7 @@ function sunburstDraw(scope, element) {
 
   // sunburst margins
   var sunburstMargin = {
-    top: 2 * radius + b.h,
+    top: 2 * radius + b.h -24,
     bottom: 0,
     left: 0,
     right: radius / 2
