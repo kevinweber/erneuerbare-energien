@@ -1,5 +1,6 @@
 var energy_production_types = ["Sonnenenergie","Biomasse und Abfälle","Geothermische Energie","Wasserkraft","Windkraft","Stein- und Braunkohle","Rohöl","Naturgas","Kernenergie"];
 var energy_consume_types = ["Stein- und Braunkohle","Rohöl","Naturgas","Kernenergie","Erneuerbare Energien"];
+var chart_pf;
 
 var parse_xAxis = [];
 
@@ -8,6 +9,8 @@ for (x in energy){
 }
 
 var energy_axis_text = "";
+var ceiling_buffer = null;
+var ceiling_reset = null;
 
 function reloadHS(chart_type) {
 	var series = [];
@@ -40,15 +43,22 @@ function reloadHS(chart_type) {
 			series[1].data.push(energy[x].consume_oil_absolute);
 			series[2].data.push(energy[x].consume_gas_absolute);
 			series[3].data.push(energy[x].consume_core_absolute);
-			series[4].data.push(energy[x].consume_renewable_total_absolute);		
+			series[4].data.push(energy[x].consume_renewable_absolute);		
 		}
 		energy_axis_text = "Inländischer Bruttoenergieverbrauch in Tonnen Rohöleinheit";
 	}
 
-    $('#container_pf').highcharts({
+	
+	
+$('#container_pf').highcharts({
 
         chart: {
-            type: 'column'
+            type: 'column',
+			events: {
+				load: function() {
+					chart_pf = this; // `this` is the reference to the chart
+				}	
+			}
         },
 	   credits: {
             enabled: false
@@ -62,7 +72,8 @@ function reloadHS(chart_type) {
             min: 0,
             title: {
                 text: energy_axis_text
-            }
+            },
+			ceiling: ceiling_buffer
         },
 
         tooltip: {
@@ -70,6 +81,11 @@ function reloadHS(chart_type) {
                 return '<b>' + this.x + '</b><br/>' +
                     this.series.name + ': ' + this.y + '<br/>' +
                     'Total: ' + this.point.stackTotal;
+            }
+        },
+		title: {
+            style: {
+                display: 'none'
             }
         },
 
@@ -81,6 +97,27 @@ function reloadHS(chart_type) {
                     color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
                     style: {
                         textShadow: '0 0 3px black'
+                    }
+                }
+	        },
+			series: {
+                cursor: 'pointer',
+                point: {
+                    events: {
+                        click: function () {
+							if (ceiling_buffer == null){
+								ceiling_reset = chart_pf.yAxis[0].getExtremes().max;
+							}
+							
+							if (ceiling_buffer == this.total){
+								ceiling_buffer = ceiling_reset;
+							}
+							else ceiling_buffer = this.total;
+							
+							chart_pf.yAxis[0].update({
+									ceiling: ceiling_buffer
+								},true);
+                        }
                     }
                 }
             }
