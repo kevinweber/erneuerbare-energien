@@ -386,7 +386,7 @@ header .intro-text .intro-heading {
 }
 
 section {
-    padding: 100px 0;
+    padding: 90px 0;
 }
 
 section h2.section-heading {
@@ -406,7 +406,7 @@ section h3.section-subheading {
 
 @media(min-width:768px) {
     section {
-        padding: 110px 0;
+        padding: 90px 0;
     }
 }
 
@@ -1035,7 +1035,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a0c884', end
 	font-size: 18px;
 	color: #fff;
 	padding: 25px;
-	text-align: center;
+	width: 88%;
+text-align: center;
+margin: 27px auto 0 auto;
 }
 .arrow_box:after, .arrow_box:before {
 	left: 100%;
@@ -1061,6 +1063,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a0c884', end
 	margin-top: -81px;
 }
 
+.alles-wrapper {
+	overflow-x: hidden !important;
+}
 .legend_multiple_select {
 	float:left;
 	margin-right:16px
