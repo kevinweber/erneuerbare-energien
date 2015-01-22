@@ -1,5 +1,5 @@
 var energy_production_types = ["Sonnenenergie","Biomasse und Abfälle","Geothermische Energie","Wasserkraft","Windkraft","Stein- und Braunkohle","Rohöl","Naturgas","Kernenergie"];
-var energy_consume_types = ["Stein- und Braunkohle","Rohöl","Naturgas","Kernenergie","Erneuerbare Energien"];
+var energy_consume_types = ["Erneuerbare Energien","Stein- und Braunkohle","Rohöl","Naturgas","Kernenergie"];
 var chart_pf;
 
 var parse_xAxis = [];
@@ -47,11 +47,11 @@ function reloadHS(chart_type) {
 		}
 
 		for (x in energy){
-			series[0].data.push(energy[x].consume_coal_absolute);
-			series[1].data.push(energy[x].consume_oil_absolute);
-			series[2].data.push(energy[x].consume_gas_absolute);
-			series[3].data.push(energy[x].consume_core_absolute);
-			series[4].data.push(energy[x].consume_renewable_absolute);		
+			series[0].data.push(energy[x].consume_renewable_absolute);
+			series[1].data.push(energy[x].consume_coal_absolute);
+			series[2].data.push(energy[x].consume_oil_absolute);
+			series[3].data.push(energy[x].consume_gas_absolute);
+			series[4].data.push(energy[x].consume_core_absolute);			
 		}
 		energy_axis_text = "Inländischer Bruttoenergieverbrauch in Tonnen Rohöleinheit";
 	}
@@ -176,17 +176,17 @@ $( "#toggle_burn" ).click(function() {
   else{
 		if($(this).hasClass('inactive')){
 		$(this).removeClass('inactive');
-		chart_pf.series[0].show();	
 		chart_pf.series[1].show();	
 		chart_pf.series[2].show();	
 		chart_pf.series[3].show();	
+		chart_pf.series[4].show();	
 	  }
 	  else{
 		$(this).addClass('inactive');
-		chart_pf.series[0].hide();
 		chart_pf.series[1].hide();
 		chart_pf.series[2].hide();
 		chart_pf.series[3].hide();
+		chart_pf.series[4].hide();
 	  }
   }
 });
@@ -216,7 +216,7 @@ Highcharts.setOptions(Highcharts.theme);
 
 function updateTheme(type){
 	 if(type == 'consume'){
-		Highcharts.theme = {colors: ['#b4481f','#b9562f','#be6440','#c47251','#146196']};
+		Highcharts.theme = {colors: ['#146196','#b4481f','#b9562f','#be6440','#c47251']};
 	 }
 	 else {
 		Highcharts.theme = {colors: ['#146196','#5195c4','#629fc9','#73a9cf','#84b3d4','#b4481f','#b9562f','#be6440','#c47251']};
