@@ -215,8 +215,7 @@
             <div class="row">
                 <div class="col-md-offset-1 col-lg-10">
                     <ul class="timeline">
-                        <li>
-                            <div class="timeline-image fill-82-4">
+                        <li><div class="timeline-image fill-82-4 fill" data-fill="17.6">
                                 <p class="img-circle img-responsive icon-text">18%</p>
                             </div>
                             <div class="col-md-offset-3 timeline-panel">
@@ -226,7 +225,7 @@
                             </div>
                         </li>
                        <li>
-                            <div class="timeline-image fill-30">
+                            <div class="timeline-image fill-30 fill" data-fill="70">
                                 <p class="img-circle img-responsive icon-text">70%</p>
                             </div>
                             <div class="col-md-offset-3 timeline-panel">
@@ -236,7 +235,7 @@
                             </div>
                         </li>
                        <li>
-                            <div class="timeline-image fill-93-1">
+                            <div class="timeline-image fill-93 fill" data-fill="7">
                                 <p class="img-circle img-responsive icon-text">10x</p>
                             </div>
                             <div class="col-md-offset-3 timeline-panel">
@@ -246,7 +245,7 @@
                             </div>
                         </li>
                         <li>
-                            <div class="timeline-image fill-91-6">
+                            <div class="timeline-image fill-91 fill" data-fill="9">
                                 <p class="img-circle img-responsive icon-text">8%</p>
                             </div>
                             <div class="col-md-offset-3 timeline-panel">
@@ -256,7 +255,7 @@
                             </div>
                         </li>
                        <li>
-                            <div class="timeline-image fill-66-6">
+                            <div class="timeline-image fill-66 fill" data-fill="34">
                                 <p class="img-circle img-responsive icon-text">1/3</p>
                             </div>
                             <div class="col-md-offset-3 timeline-panel">
@@ -266,7 +265,7 @@
                             </div>
                         </li>
                        <li>
-                            <div class="timeline-image fill-41">
+                            <div class="timeline-image fill-41 fill" data-fill="59">
                                 <p class="img-circle img-responsive icon-text">41%</p>
                             </div>
                             <div class="col-md-offset-3 timeline-panel">
@@ -276,7 +275,7 @@
                             </div>
                         </li>
                         <li>
-                            <div class="timeline-image fill-83-3">
+                            <div class="timeline-image fill-83 fill" data-fill="17">
                                 <p class="img-circle img-responsive icon-text">1/6</p>
                             </div>
                             <div class="col-md-offset-3 timeline-panel">
@@ -286,7 +285,7 @@
                             </div>
                         </li>
                        <li>
-                            <div class="timeline-image fill-38">
+                            <div class="timeline-image fill-38 fill" data-fill="62">
                                 <p class="img-circle img-responsive icon-text">62%</p>
                             </div>
                             <div class="col-md-offset-3 timeline-panel">
@@ -297,7 +296,7 @@
                         </li>
 <!--
                        <li>
-                            <div class="timeline-image fill-84-6">
+                            <div class="timeline-image fill-84 fill" data-fill="16>
                                 <p class="img-circle img-responsive icon-text">4x</p>
                             </div>
                             <div class="col-md-offset-3 timeline-panel">
@@ -608,6 +607,8 @@
 
     <!-- Line Labels JS (Kevin) -->
     <script src="js/line-labels.js"></script>
+    <!-- Animated Circles//jQuery.appear JS (Kevin) -->
+    <script src="custom/js/jquery.inview.min.js"></script>
 	
 	<!-- Stacked Column Chart JS (Patrick) -->
 	<script src="js/stackedcolumn.js"></script>
@@ -634,8 +635,56 @@
 		}
     }
 			</script>
-    
+
+    <script>
+    // Fill circle animation
+    (function ( $ ) {
+        function animate( $that, percentage ) {
+            if ( !$that.hasClass('fill') ) return;
+            $that.removeClass('fill');
+
+            percentage = (100 - percentage) || 100;
+            var percentage_initial = 100,
+                percentage_current = percentage_initial,
+                interval = 0.5;
+
+            var interval_gradient = setInterval(function(){
+                $that.css(
+                    'background',
+                    'linear-gradient(#a0c884 '+percentage_current+'%,#426e1f '+percentage_current+'%)'
+                    );
+                percentage_current -= interval;
+                if(percentage_current <= percentage) clearInterval(interval_gradient);
+            }, 5);
+
+            $that.addClass('filled');
+        };
+
+
+        $('.fill').on('inview', function(event, isInView, visiblePartX, visiblePartY) {
+          if (isInView) {
+            // element is now visible in the viewport
+            if (visiblePartY == 'top') {
+              // top part of element is visible
+            } else if (visiblePartY == 'bottom') {
+              // bottom part of element is visible
+            } else {
+                var $that = $(this);
+                var percentage = $that.attr('data-fill');
+                setTimeout(function(){
+                    animate( $that, percentage )
+                }, 400);
+            }
+          } else {
+            // element has gone out of viewport
+          }
+        });
+
+    })(jQuery);
+    </script> 
+
 </div>
+
 </body>
 
 </html>
