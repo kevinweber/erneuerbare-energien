@@ -635,58 +635,56 @@
 		}
     }
 			</script>
-    
-<<<<<<< HEAD
+
+    <script>
+    // Fill circle animation
+    (function ( $ ) {
+        function animate( $that, percentage ) {
+            if ( !$that.hasClass('fill') ) return;
+            $that.removeClass('fill');
+
+            percentage = (100 - percentage) || 100;
+            var percentage_initial = 100,
+                percentage_current = percentage_initial,
+                interval = 0.5;
+
+            var interval_gradient = setInterval(function(){
+                $that.css(
+                    'background',
+                    'linear-gradient(#a0c884 '+percentage_current+'%,#426e1f '+percentage_current+'%)'
+                    );
+                percentage_current -= interval;
+                if(percentage_current <= percentage) clearInterval(interval_gradient);
+            }, 5);
+
+            $that.addClass('filled');
+        };
+
+
+        $('.fill').on('inview', function(event, isInView, visiblePartX, visiblePartY) {
+          if (isInView) {
+            // element is now visible in the viewport
+            if (visiblePartY == 'top') {
+              // top part of element is visible
+            } else if (visiblePartY == 'bottom') {
+              // bottom part of element is visible
+            } else {
+                var $that = $(this);
+                var percentage = $that.attr('data-fill');
+                setTimeout(function(){
+                    animate( $that, percentage )
+                }, 400);
+            }
+          } else {
+            // element has gone out of viewport
+          }
+        });
+
+    })(jQuery);
+    </script> 
+
 </div>
-=======
-<script>
-// Fill circle animation
-(function ( $ ) {
-    function animate( $that, percentage ) {
-        if ( !$that.hasClass('fill') ) return;
-        $that.removeClass('fill');
 
-        percentage = (100 - percentage) || 100;
-        var percentage_initial = 100,
-            percentage_current = percentage_initial,
-            interval = 0.5;
-
-        var interval_gradient = setInterval(function(){
-            $that.css(
-                'background',
-                'linear-gradient(#a0c884 '+percentage_current+'%,#426e1f '+percentage_current+'%)'
-                );
-            percentage_current -= interval;
-            if(percentage_current <= percentage) clearInterval(interval_gradient);
-        }, 5);
-
-        $that.addClass('filled');
-    };
-
-
-    $('.fill').on('inview', function(event, isInView, visiblePartX, visiblePartY) {
-      if (isInView) {
-        // element is now visible in the viewport
-        if (visiblePartY == 'top') {
-          // top part of element is visible
-        } else if (visiblePartY == 'bottom') {
-          // bottom part of element is visible
-        } else {
-            var $that = $(this);
-            var percentage = $that.attr('data-fill');
-            setTimeout(function(){
-                animate( $that, percentage )
-            }, 400);
-        }
-      } else {
-        // element has gone out of viewport
-      }
-    });
-
-})(jQuery);
-</script> 
-
->>>>>>> Animated bubble fill
 </body>
 
 </html>
