@@ -71,8 +71,8 @@ $(function () {
                 dataLabels: {
                     enabled: true,
                     style: { 
-						    color: "#222",
-							textShadow: '0px 0px 2px #fff',
+						    color: "#f7f7f7",
+							textShadow: '0px 0px 2px #000',
 						   },
                     formatter: function() {
                         return this.point.name;
