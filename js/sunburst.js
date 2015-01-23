@@ -46,7 +46,7 @@ function sunburstDraw(scope, element) {
 
   // sunburst margins
   var sunburstMargin = {
-    top: 2 * radius + b.h -24,
+    top: 2 * radius + b.h -10,
     bottom: 0,
     left: 0,
     right: radius / 2
@@ -64,6 +64,20 @@ function sunburstDraw(scope, element) {
   .domain(["Erzeugung", "Stein und Braunkohle", "Rohoel", "Naturgas", "Kernenergie", "erneuerbare Energien", "Sonnenenergie", "Biomasse und Abfaelle", "geothermische Energie", "Wasserkraft", "Windkraft"])
   .range(["#fff", "#A0C884", "#B4481F", "#B9562F", "#BE6440", "#C47251", "#146196", "#5195C4", "#629FC9", "#73A9CF", "#84B3D4", "#95BEDA"]);
 
+	
+	var colorNames = {
+  		" Erzeugung": "#A0C884", 
+		" Stein und Braunkohle": "#B4481F", 
+		" Rohoel": "#B9562F", 
+		" Naturgas": "#BE6440", 
+		" Kernenergie": "#C47251", 
+		" erneuerbare Energien": "#146196", 
+		" Sonnenenergie": "#5195C4", 
+		" Biomasse und Abfaelle": "#629FC9", 
+		" geothermische Energie": "#73A9CF", 
+		" Wasserkraft": "#84B3D4", 
+		" Windkraft": "#95BEDA"
+};
   // Total size of all nodes, to be used later when data is loaded
   var totalSize = 0;
 
@@ -233,7 +247,9 @@ function sunburstDraw(scope, element) {
         return d.depth ? null : "none";
       })
       .attr("d", arc)
-      .attr("fill", colorMap)
+      .attr("fill", function(d) { 
+		  return colorNames[d.name]; 
+	  })
       .attr("opacity", 1)
       .attr("stroke", "white")
       .on("mouseover", mouseover);
@@ -265,9 +281,9 @@ function sunburstDraw(scope, element) {
       .attr("ry", li.r)
       .attr("width", li.w)
       .attr("height", li.h)
-      .style("fill", function(d) {
-        return colors(d);
-      });
+      .style("fill", function(d) { 
+		  return colorNames[d]; 
+	  });
 
     g.append("text").classed("legend-text", true)
       .attr("x", li.w / 2)
@@ -379,7 +395,9 @@ function sunburstDraw(scope, element) {
     breadcrumb
       .append("polygon").classed("breadcrumbs-shape", true)
       .attr("points", breadcrumbPoints)
-      .attr("fill", colorMap);
+      .attr("fill", function(d) { 
+		  return colorNames[d.name]; 
+	  });
 
     breadcrumb
       .append("text").classed("breadcrumbs-text", true)

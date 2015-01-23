@@ -38,15 +38,13 @@ function setActive(elem) {
 
 $('#states a').click( function() {
 	var fillColor = $(this).find('path').css('fill');
-	
-	console.log('lel');
-	console.log($(this));
+	$(".summary-container").css('visibility', 'hidden');
 	if (fillColor == 'rgb(34, 34, 34)') {
-		$('#states').find('path').css('fill', '#A0C884');
-		$('#states').find('text').removeAttr('style');
+		$('#states a').find('path').css('fill', '#A0C884');
+		$('#states a').find('text').removeAttr('style');
 	} else {
-		$('#states').find('path').css('fill', '#A0C884');
-		$('#states').find('text').removeAttr('style');
+		$('#states a').find('path').css('fill', '#A0C884');
+		$('#states a').find('text').removeAttr('style');
 		$(this).find('path').css('fill', 'rgb(34, 34, 34)');
 		$(this).find('text').css('fill', '#A0C884');
 	}
